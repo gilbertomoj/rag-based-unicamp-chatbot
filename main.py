@@ -13,21 +13,8 @@ def reset_chat_messages():
     st.session_state.messages = []
 
 
-def download_message_history():
-    print(st.session_state.messages)
-    json_data = st.session_state.messages
-    json_text = json.dumps(json_data, indent=2)
-    return json_text
-
-
 with st.sidebar:
     st.button("Reset", type="primary", on_click=reset_chat_messages())
-    st.download_button(
-        label="Histórico",
-        data=download_message_history(),
-        file_name='large_df.json',
-        mime='application/json',
-    )
 
 
 class RAGChat:
