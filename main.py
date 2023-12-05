@@ -1,18 +1,35 @@
 import streamlit as st
 from qa_chain import setup_qa_chain
+import json
 
-st.set_page_config(page_title="RAG Unicamp", page_icon="📚")
-st.title("Vestibular Unicamp")
+st.set_page_config(page_title="ChatCamp", page_icon="📚")
+st.title("Unicamp Virtual")
+
+if "messages" not in st.session_state:
+    st.session_state.messages = []
+
+
+def reset_chat_messages():
+    st.session_state.messages = []
+
+
+def download_message_history():
+    print(st.session_state.messages)
+    json_data = st.session_state.messages
+    json_text = json.dumps(json_data, indent=2)
+    return json_text
+
 
 with st.sidebar:
-    st.button("Reset", type="primary")
-    st.button("Application", type="primary")
-    st.download_button('Histórico do chat', 'text_contents')
-    with st.echo():
-        st.write("This code will be printed to the sidebar.")
+    st.button("Reset", type="primary", on_click=reset_chat_messages())
+    st.download_button(
+        label="Histórico",
+        data=download_message_history(),
+        file_name='large_df.json',
+        mime='application/json',
+    )
 
 
-    st.success("Done!")
 class RAGChat:
     def __init__(self):
         self.qa_chain = setup_qa_chain()
