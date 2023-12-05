@@ -1,6 +1,5 @@
 import streamlit as st
 from qa_chain import setup_qa_chain
-import json
 
 st.set_page_config(page_title="ChatCamp", page_icon="📚")
 st.title("Unicamp Virtual")
