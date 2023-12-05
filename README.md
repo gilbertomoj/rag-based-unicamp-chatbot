@@ -1,5 +1,5 @@
 # Assistente Virtual Unicamp
-Chatbot baseado em RAG (Retrieval Augmented Generation) usando a API GPT3.5 ou similar como agente inteligente para responder a perguntas sobre o Vestibular Unicamp 2024, abaixo segue o relatório com informações sobre Implementação (bibliotecas e funções utilizadas para o projeto), Avaliação (testes manuais para analisar a precisão do projeto), Instalação e execução (mini guia para execução do projeto localmente)   
+Chatbot baseado em RAG (Retrieval Augmented Generation) usando a API GPT3.5 ou similar como agente inteligente para responder a perguntas sobre o Vestibular Unicamp 2024, abaixo segue o relatório com informações sobre Implementação (bibliotecas e funções utilizadas para o projeto), Avaliação (testes manuais para analisar a precisão do projeto), Instalação e execução (mini guia para execução do projeto localmente).  
 
 ## Implementação 
 ### Bibliotecas Utilizadas
@@ -49,5 +49,5 @@ OPENAI_API_KEY="SUA KEY" # Sem as aspas !
 streamlit run main.py
 `````
 ## Deploy
-
+O projeto foi hospedado no Streamlit Community Cloud, podendo ser acessado no link [rag-based-unicamp-chatbot](https://rag-based-unicamp-chatbot-btjzeqvsqyegbwrtcsyqmi.streamlit.app)
 
