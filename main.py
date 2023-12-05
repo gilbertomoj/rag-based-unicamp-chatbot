@@ -5,9 +5,6 @@ import json
 st.set_page_config(page_title="ChatCamp", page_icon="📚")
 st.title("Unicamp Virtual")
 
-if "messages" not in st.session_state:
-    st.session_state.messages = []
-
 
 def reset_chat_messages():
     st.session_state.messages = []
